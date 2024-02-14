@@ -4,7 +4,7 @@ from rdkit import Chem
 from rdkit.Chem import Draw
 from rdkit.Chem import rdChemReactions
 from rdkit.Chem.Draw import rdMolDraw2D
-# from rdkit.Chem.Draw import IPythonConsole
+from rdkit.Chem.Draw import IPythonConsole
 from PIL import Image
 
 # Function to draw chemical reaction
@@ -16,7 +16,7 @@ def draw_chemical_reaction(smiles, highlightByReactant=False, font_scale=0.5):
         moveAtomMapsToNotes(m)
     for m in trxn.GetProducts():
         moveAtomMapsToNotes(m)
-    d2d = rdMolDraw2D.MolDraw2DSVG(1000, 300)
+    d2d = rdMolDraw2D.MolDraw2DSVG(2000, 400)
     d2d.drawOptions().annotationFontScale = font_scale
     d2d.DrawReaction(trxn, highlightByReactant=highlightByReactant)
 
@@ -65,6 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
