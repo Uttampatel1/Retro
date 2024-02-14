@@ -4,7 +4,7 @@ from rdkit import Chem
 from rdkit.Chem import Draw
 from rdkit.Chem import rdChemReactions
 from rdkit.Chem.Draw import rdMolDraw2D
-from rdkit.Chem.Draw import IPythonConsole
+# from rdkit.Chem.Draw import IPythonConsole
 from PIL import Image
 
 # Function to draw chemical reaction
